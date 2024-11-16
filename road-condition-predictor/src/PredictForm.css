@@ -100,6 +100,19 @@
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
+.input-grid label {
+    margin-bottom: 0.5rem;
+    display: block;  /* Makes label take full width */
+}
+
+.input-grid input,
+.input-grid select {
+    margin-bottom: 1rem;    /* Space between input groups */
+    width: 100%;            /* Full width inputs */
+    padding: 0.5rem;        /* Consistent padding */
+}
+
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -111,6 +124,8 @@
     100% { transform: scale(1); }
 }
 
+
+/* Update existing media query to maintain spacing on mobile */
 @media (max-width: 768px) {
     .predict-form-container {
         padding: 1rem;
@@ -118,9 +133,10 @@
 
     .input-grid {
         grid-template-columns: 1fr;
+        gap: 0.5rem;        /* Add gap between grid items */
     }
 
-    .title {
-        font-size: 2rem;
+    .input-grid label {
+        margin-bottom: 0.25rem;  /* Slightly tighter spacing on mobile */
     }
 }
